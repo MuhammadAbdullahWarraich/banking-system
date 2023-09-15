@@ -81,11 +81,10 @@ void print(string separator="->") {
 
 Iterator itr;
 for (itr = begin();itr != end();itr++)
+  cout << *(itr) << separator;
 
-cout << *(itr) << separator;
-
-}
 cout << "\n";
+}
 Iterator insert(Iterator it, T d)
 {
 Node* p = it.curr;
