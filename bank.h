@@ -17,7 +17,7 @@ class Bank{
         transactionID=id;
         transactionType=type;
         this->transferredAmount=transferredAmount;
-        this->accountNumber=accountNumber;//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //this->accountNumber=accountNumber;//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         time_t currentTime = time(0);
         tm* getTimeStuff=localtime(&currentTime);
         transactionDate[0]=getTimeStuff->tm_mday;
