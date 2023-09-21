@@ -66,7 +66,10 @@ class Bank{
       cout << "\nAccount Number: " << accountNumber;
       cout << "\nAccount Balance: " << accountBalance;
     }
-    
+    Account(int accNo, string title){
+      accountNumber=accNo;
+      accountTitle=title;
+    }
   };
   List<Account> accounts;
 public:
