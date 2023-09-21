@@ -6,13 +6,13 @@ class Bank{
   int trans_Serial;
   class Account{
     class Transaction{
-    public:
       int transactionID;
       int transactionDate[3];//dd-mm-yyyy
       int transactionTime[3];//hh-mm-ss
       string transactionType;
       float transferredAmount;
       int accountNumber;
+    public:
       Transaction(int id, string type, int transferredAmount, int accountNumber=-1){
         transactionID=id;
         transactionType=type;
@@ -41,7 +41,7 @@ class Bank{
     int accountNumber;
     List<Transaction> transactionHistory;
     int accountBalance;
-    public:
+  public:
     void creditTransaction(int transactionID, int money){
       Transaction* temp=new Transaction(transactionID, "credit", money);
       transactionHistory.insertatTail(temp);
