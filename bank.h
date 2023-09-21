@@ -66,11 +66,18 @@ class Bank{
       cout << "\nAccount Number: " << accountNumber;
       cout << "\nAccount Balance: " << accountBalance;
     }
+    
   };
   List<Account> accounts;
 public:
   Bank(){
     acc_Serial=0;
     trans_Serial=0;
+  }
+  void addNewAccount(string title, int balance=0){
+    Account* temp=new Account(acc_Serial, title);
+    if (balance>0){
+      temp->debitTransaction(balance);
+    }
   }
 };
