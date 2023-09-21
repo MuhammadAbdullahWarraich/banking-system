@@ -81,7 +81,7 @@ public:
   void addNewAccount(string title, int balance=0){
     Account* temp=new Account(acc_Serial, title);
     if (balance>0){
-      temp->debitTransaction(balance);
+      temp->debitTransaction(trans_Serial, balance);
     }
   }
 };
