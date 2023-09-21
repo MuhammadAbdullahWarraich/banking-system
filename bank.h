@@ -28,6 +28,13 @@ class Bank{
         transactionTime[1]=getTimeStuff->tm_min;
         transactionTime[2]=getTimeStuff->tm_sec;
       }
+      friend ostream& operator << (ostream& out, const Transaction& t){
+        out << "Transaction ID: " << t.transactionID;
+        out << "\nTransaction Date: " << t.transactionDate[0] << "-" << t.transactionDate[1] << "-" << t.transactionDate[2] << " (dd-mm-yyyy)";
+        out << "\nTransaction Time: " << t.transactionTime[0] << ":" << t.transactionTime[1] << ":" << t.transactionTime[2] << " (hh:mm:ss)";
+        out << "\nTransaction Type: " << t.transactionType;
+        out << "\nTransferred Amount: " << t.transferredAmount;
+      }
     };
     string accountTitle;
     int accountNumber;
