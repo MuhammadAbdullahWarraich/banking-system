@@ -34,6 +34,7 @@ class Bank{
         out << "\nTransaction Time: " << t.transactionTime[0] << ":" << t.transactionTime[1] << ":" << t.transactionTime[2] << " (hh:mm:ss)";
         out << "\nTransaction Type: " << t.transactionType;
         out << "\nTransferred Amount: " << t.transferredAmount;
+        //out << "Account Number: " << t.accountNumber;//figure this out!!!!!!!!!!!!!!!!!!!!!!!!
       }
     };
     string accountTitle;
