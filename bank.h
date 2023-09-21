@@ -82,6 +82,7 @@ public:
     Account* temp=new Account(acc_Serial, title);
     if (balance>0){
       temp->debitTransaction(trans_Serial, balance);
+      trans_Serial++;
     }
   }
 };
