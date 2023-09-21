@@ -41,6 +41,7 @@ class Bank{
     int accountNumber;
     List<Transaction> transactionHistory;
     int accountBalance;
+    public:
     void creditTransaction(int transactionID, int money){
       Transaction* temp=new Transaction(transactionID, "credit", money);
       transactionHistory.insertatTail(temp);
