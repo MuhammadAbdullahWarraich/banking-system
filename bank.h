@@ -38,6 +38,17 @@ class Bank{
       transactionHistory.insertatTail(temp);
       accountBalance+=money;
     }
+    void debitTransaction(int transactionID, int money){
+      if (accountBalance>=money){
+        Transaction* temp=new Transaction(transactionID, "debit", money);
+        transactionHistory.insertatTail(temp);
+        accountBalance-=money;
+      }
+      else{
+        cout << "ERROR! You don't have enough balance to perform this transaction.";
+      }
+    }
+   
   };
   List<Account> accounts;
 public:
