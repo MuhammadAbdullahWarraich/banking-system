@@ -56,12 +56,15 @@ class Bank{
         cout << "ERROR! You don't have enough balance to perform this transaction.";
       }
     }
-     void displayAccount(){
+     void displayAll(){
+      displayAccount();
+      cout << "\n\nTransaction History:\n";
+      transactionHistory.print("\n\n");
+    }
+    void displayAccount(){
       cout << "Account Title: " << accountTitle;
       cout << "\nAccount Number: " << accountNumber;
       cout << "\nAccount Balance: " << accountBalance;
-      cout << "\n\nTransaction History:\n";
-      transactionHistory.print("\n");
     }
   };
   List<Account> accounts;
